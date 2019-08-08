@@ -22,7 +22,7 @@ class Negociacao {
 
     get quantidade(){
 
-        return this.quantidade;
+        return this._quantidade;
     }
 
     get valor(){
