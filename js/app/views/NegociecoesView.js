@@ -31,14 +31,7 @@ class NegociacoesView{
                 `).join('')}
             </tbody>
                 <td colspan="3">Total Volume</td>
-                <td>${
-                    (function(){
-
-                        let total = 0;
-                        modelo.negociacoes.forEach(negociacoes => total += negociacoes.volume);
-                        return total;
-                    })() 
-                }</td>
+                <td>${modelo.negociacoes.reduce((total, negociacao) => total += negociacao.volume, 0.0)}</td>
             <tfoot>
             </tfoot>
         </table>
